@@ -1,0 +1,7 @@
+FROM python:3.10.0b1-alpine3.13
+
+COPY basicConsumer.py .
+
+RUN pip3 install kafka-python
+
+CMD [ "python3", "basicConsumer.py" ]
